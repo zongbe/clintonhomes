@@ -15,27 +15,7 @@ function submitRentalRequest() {
     <Nav />
 
     <main>
-      <section class="rent-intro">
-        <div class="intro-copy">
-          <p class="eyebrow">Rent, made personal</p>
-          <h1>A better way to find your next address.</h1>
-          <p class="intro-text">
-            Search with a clear budget, a real move-in date, and the details that make a place feel like home.
-          </p>
-          <div class="intro-meta">
-            <span><b>01</b> Tell us what matters</span>
-            <span><b>02</b> Get a considered shortlist</span>
-          </div>
-        </div>
-        <div class="intro-image">
-          <img src="@/assets/images/rent-cover-image.webp" alt="Bright living room in a home available to rent" />
-          <div class="image-label">
-            <span class="label-dot"></span>
-            <span>Homes worth coming home to</span>
-          </div>
-        </div>
-      </section>
-
+      
       <section class="search-section" id="rent-form">
         <div class="section-heading">
           <div>

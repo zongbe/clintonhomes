@@ -15,25 +15,7 @@ function submitCoLivingRequest() {
     <Nav />
 
     <main>
-      <section class="coliving-hero">
-        <div class="coliving-hero__copy">
-          <p class="eyebrow">Live together, better</p>
-          <h1>Find your ideal room share or co-living space.</h1>
-          <p class="hero-text">
-            Discover flexible shared homes with people who match your lifestyle, routine, and budget. We make it easier to find a home that feels good from the start.
-          </p>
-          <div class="hero-notes" aria-label="Co-living benefits">
-            <span>Verified homes</span>
-            <span>Shared lifestyle matching</span>
-          </div>
-        </div>
-
-        <div class="coliving-hero__image">
-          <img src="@/assets/images/Co-living-cover-image.webp" alt="Shared room living arrangement" />
-          <div class="image-caption"><strong>More connection, less compromise.</strong><span>Clinton Homes co-living</span></div>
-        </div>
-      </section>
-
+      <br> <br> <br>
       <section class="coliving-workspace" id="coliving-form">
         <div class="form-intro">
           <p class="eyebrow">Start your co-living search</p>
@@ -133,17 +115,6 @@ function submitCoLivingRequest() {
   margin: 0 auto;
 }
 
-.coliving-hero {
-  display: grid;
-  grid-template-columns: 0.96fr 1.04fr;
-  gap: clamp(24px, 4vw, 52px);
-  align-items: center;
-  padding: 56px 0 72px;
-}
-
-.coliving-hero__copy {
-  padding: 10px 0;
-}
 
 .eyebrow {
   display: inline-block;
@@ -163,88 +134,7 @@ h3 {
   font-weight: 600;
 }
 
-h1 {
-  max-width: 540px;
-  font-size: clamp(2.8rem, 5vw, 5rem);
-  line-height: 0.94;
-  letter-spacing: -0.04em;
-}
 
-.hero-text {
-  max-width: 460px;
-  margin: 22px 0 28px;
-  color: #5a5850;
-  font-size: 1.04rem;
-  line-height: 1.75;
-}
-
-.hero-notes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 18px;
-  color: #1b2a41;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.hero-notes span {
-  display: inline-flex;
-  align-items: center;
-  padding: 9px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(125, 91, 79, 0.14);
-}
-
-.hero-notes span::before {
-  content: '✓';
-  margin-right: 7px;
-  color: #7d5b4f;
-}
-
-.coliving-hero__image {
-  position: relative;
-  min-height: 540px;
-  overflow: hidden;
-  border-radius: 28px 28px 28px 92px;
-  box-shadow: 0 26px 58px rgba(98, 74, 56, 0.14);
-  background: #e9dfd6;
-}
-
-.coliving-hero__image img {
-  width: 100%;
-  height: 100%;
-  min-height: 540px;
-  display: block;
-  object-fit: cover;
-}
-
-.image-caption {
-  position: absolute;
-  left: 22px;
-  right: 22px;
-  bottom: 22px;
-  display: grid;
-  gap: 5px;
-  padding: 18px 20px;
-  background: rgba(38, 26, 20, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: white;
-  border-radius: 14px;
-}
-
-.image-caption strong {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 1.14rem;
-  font-weight: 600;
-}
-
-.image-caption span {
-  color: rgba(244, 236, 230, 0.9);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
 
 .coliving-workspace {
   display: grid;

@@ -18,9 +18,9 @@
             <span>Listed By Clinton Homes</span>
         </div>
          <div class="listing-card_info">
-          <p class="listing-card_price">$895,000</p>
-          <p class="listing-card_details">7 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 645 sq ft</p>
-          <p class="listing-card_address">1428 Sunset Blvd, Los Angeles, CA 90026</p>
+          <p class="listing-card_price">₦ 895,000,000</p>
+          <p class="listing-card_details">5 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 3,250 sq ft</p>
+          <p class="listing-card_address">Ikoyi, Lagos</p>
         </div>
         <div class="card-footer">
           <button class="view-btn">View Property</button>
@@ -36,9 +36,9 @@
             <span>Listed By Clinton Homes</span>
         </div>
          <div class="listing-card_info">
-          <p class="listing-card_price">$1,250,000</p>
-          <p class="listing-card_details">7 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 655 sq ft</p>
-          <p class="listing-card_address">825 Park Avenue, New York, NY 10021</p>
+          <p class="listing-card_price">₦ 1,250,000,000</p>
+          <p class="listing-card_details">4 beds &nbsp;&nbsp; 3 baths &nbsp;&nbsp; 2,850 sq ft</p>
+          <p class="listing-card_address">Wuse, Abuja</p>
         </div>
         <div class="card-footer">
           <button class="view-btn">View Property</button>
@@ -54,9 +54,9 @@
             <span>Listed By Clinton Homes</span>
         </div>
          <div class="listing-card_info">
-          <p class="listing-card_price">$735,000</p>
-          <p class="listing-card_details">7 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 555 sq ft</p>
-          <p class="listing-card_address">301 Congress Avenue, Austin, TX 78701</p>
+          <p class="listing-card_price">₦ 735,000,000</p>
+          <p class="listing-card_details">6 beds &nbsp;&nbsp; 5 baths &nbsp;&nbsp; 3,500 sq ft</p>
+          <p class="listing-card_address">Lekki Phase 1, Lagos</p>
         </div>
         <div class="card-footer">
           <button class="view-btn">View Property</button>
@@ -74,9 +74,9 @@
             <span>Listed By Clinton Homes</span>
         </div>
          <div class="listing-card_info">
-          <p class="listing-card_price">$680,000</p>
-          <p class="listing-card_details">7 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 755 sq ft</p>
-          <p class="listing-card_address">1842 Peachtree Street, Atlanta, GA 30309</p>
+          <p class="listing-card_price">₦ 680,000,000</p>
+          <p class="listing-card_details">3 beds &nbsp;&nbsp; 3 baths &nbsp;&nbsp; 1,900 sq ft</p>
+          <p class="listing-card_address">Gwarinpa, Abuja</p>
         </div>
         <div class="card-footer">
           <button class="view-btn">View Property</button>
@@ -92,9 +92,9 @@
             <span>Listed By Clinton Homes</span>
         </div>
          <div class="listing-card_info">
-          <p class="listing-card_price">$925,000</p>
-          <p class="listing-card_details">7 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 557 sq ft</p>
-          <p class="listing-card_address">675 Lincoln Road, Miami Beach, FL 33139</p>
+          <p class="listing-card_price">₦ 925,000,000</p>
+          <p class="listing-card_details">4 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 2,400 sq ft</p>
+          <p class="listing-card_address">Ikeja, Lagos</p>
         </div>
         <div class="card-footer">
           <button class="view-btn">View Property</button>
@@ -110,9 +110,9 @@
             <span>Listed By Clinton Homes</span>
         </div>
          <div class="listing-card_info">
-          <p class="listing-card_price">$820,000</p>
-          <p class="listing-card_details">7 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 555 sq ft</p>
-          <p class="listing-card_address">1200 3rd Avenue, Seattle, WA 98101</p>
+          <p class="listing-card_price">₦ 820,000,000</p>
+          <p class="listing-card_details">5 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 2,900 sq ft</p>
+          <p class="listing-card_address">Victoria Island, Lagos</p>
         </div>
         <div class="card-footer">
           <button class="view-btn">View Property</button>

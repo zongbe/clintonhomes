@@ -13,33 +13,7 @@ function submitLeaseRequest() {
 <template>
   <div class="lease-page">
     <Nav />
-
     <main>
-      <section class="lease-hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Long-term living, considered carefully</p>
-          <h1>Find a lease that gives you room to settle in.</h1>
-          <p class="hero-text">
-            From the first viewing to the final signature, we help you find a home with clear terms, a sensible timeline, and the right feeling.
-          </p>
-          <a class="hero-link" href="#lease-form">Begin your lease enquiry <span aria-hidden="true">↓</span></a>
-        </div>
-        <div class="hero-media">
-          <img src="@/assets/images/lease-cover-image.webp" alt="Modern home available for a long-term lease" />
-          <div class="hero-caption">
-            <span class="caption-kicker">Featured approach</span>
-            <strong>Clarity before commitment.</strong>
-            <span>Lease support by Clinton Homes</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="lease-values" aria-label="Lease service benefits">
-        <div><strong>01</strong><span>Terms you can understand</span></div>
-        <div><strong>02</strong><span>Flexible options for real life</span></div>
-        <div><strong>03</strong><span>Support from search to signing</span></div>
-      </section>
-
       <section class="lease-workspace" id="lease-form">
         <aside class="form-intro">
           <p class="eyebrow">Start your enquiry</p>
