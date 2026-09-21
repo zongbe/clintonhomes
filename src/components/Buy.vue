@@ -7,12 +7,12 @@ import lekkiCover from '@/assets/images/properties/lekki-duplex-cover.webp'
 import chevronCover from '@/assets/images/properties/chevron-apartment-cover.webp'
 import ikoyiCover from '@/assets/images/properties/ikoyi-apartment-cover.webp'
 import yabaCover from '@/assets/images/properties/yaba-apartment-cover.webp'
-import losAngelesHome from '@/assets/images/sell.jpg'
-import newYorkHome from '@/assets/images/rent.jpg'
-import austinHome from '@/assets/images/buy.jpg'
-import atlantaHome from '@/assets/images/co-living.jpg'
-import miamiHome from '@/assets/images/lease.jpg'
-import seattleHome from '@/assets/images/night.jpg'
+import losAngelesHome from '@/assets/images/sell.webp'
+import newYorkHome from '@/assets/images/rent.webp'
+import austinHome from '@/assets/images/buy.webp'
+import atlantaHome from '@/assets/images/co-living.webp'
+import miamiHome from '@/assets/images/lease.webp'
+import seattleHome from '@/assets/images/night.webp'
 
 const router = useRouter()
 const route = useRoute()
@@ -63,7 +63,7 @@ const properties = [
 		slug: 'sunset-blvd-home',
 		price: '₦895,000,000',
 		title: 'Sunset garden residence',
-		location: 'Ikoyi, Lagos',
+		location: 'Victoria Island, Lagos',
 		details: '5 Beds  ·  4 Baths  ·  3,250 sq ft',
 		tag: 'Featured',
 		categories: ['house', 'large', 'parking'],
@@ -83,7 +83,7 @@ const properties = [
 		slug: 'congress-avenue-home',
 		price: '₦735,000,000',
 		title: 'Congress Avenue modern home',
-		location: 'Lekki Phase 1, Lagos',
+		location: 'Abeokuta, Ogun',
 		details: '6 Beds  ·  5 Baths  ·  3,500 sq ft',
 		tag: 'Verified',
 		categories: ['house', 'parking'],
@@ -113,7 +113,7 @@ const properties = [
 		slug: 'third-avenue-home',
 		price: '₦820,000,000',
 		title: 'Third Avenue light-filled home',
-		location: 'Victoria Island, Lagos',
+		location: 'Festac, Lagos',
 		details: '5 Beds  ·  4 Baths  ·  2,900 sq ft',
 		tag: 'New listing',
 		categories: ['apartment', 'parking'],

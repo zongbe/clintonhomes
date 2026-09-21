@@ -9,6 +9,12 @@ import Sell from "@/views/Sell.vue";
 import Rent from "@/views/Rent.vue";
 import Lease from "@/views/Lease.vue";
 import CoLiving from "@/views/CoLiving.vue";
+import LandlordProfile from "@/views/LandlordProfile.vue";
+import AdminDashboard from "@/views/admin/Dashboard.vue";
+import AdminProperties from "@/views/admin/Properties.vue";
+import AdminLandlords from "@/views/admin/Landlords.vue";
+import AdminLeads from "@/views/admin/Leads.vue";
+import AdminReports from "@/views/admin/Reports.vue";
 
 const routes = [
     {path: '/', name:'Home', component: Home},
@@ -21,6 +27,13 @@ const routes = [
     {path: '/lease', name:'Lease', component: Lease},
     {path: '/co-living', name:'CoLiving', component: CoLiving},
     {path: '/properties/:slug', name:'PropertyDetails', component: PropertyDetails},
+    {path: '/landlord/:slug', name:'LandlordProfile', component: LandlordProfile},
+    {path: '/admin', redirect: '/admin/dashboard'},
+    {path: '/admin/dashboard', name:'AdminDashboard', component: AdminDashboard, meta: { title: 'Dashboard' }},
+    {path: '/admin/properties', name:'AdminProperties', component: AdminProperties, meta: { title: 'Properties' }},
+    {path: '/admin/landlords', name:'AdminLandlords', component: AdminLandlords, meta: { title: 'Landlords' }},
+    {path: '/admin/leads', name:'AdminLeads', component: AdminLeads, meta: { title: 'Leads' }},
+    {path: '/admin/reports', name:'AdminReports', component: AdminReports, meta: { title: 'Reports' }},
 ]
 const router = createRouter({
     history: createWebHistory(),
@@ -33,4 +46,35 @@ const router = createRouter({
         return { top: 0 };
     },
 })
+
+router.beforeEach((to, from, next) => {
+    const isAdminRoute = to.path.startsWith('/admin')
+    const isLandlordRoute = to.path.startsWith('/landlord')
+    const isAdminAuthenticated = localStorage.getItem('ch_admin_authenticated') === 'true'
+    const isUserAuthenticated = localStorage.getItem('ch_user_authenticated') === 'true'
+    const isAuthenticated = isAdminAuthenticated || isUserAuthenticated
+
+    if (isAdminRoute && !isAdminAuthenticated) {
+        next('/login')
+        return
+    }
+
+    if (isLandlordRoute && !isAuthenticated) {
+        next('/login')
+        return
+    }
+
+    if (to.path === '/login' && isAuthenticated) {
+        if (isAdminAuthenticated) {
+            next('/admin/dashboard')
+            return
+        }
+
+        next('/buy')
+        return
+    }
+
+    next()
+})
+
 export default router

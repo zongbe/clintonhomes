@@ -1,4 +1,62 @@
 <script setup>
+import { useRouter } from 'vue-router'
+import sellImage from '@/assets/images/sell.webp'
+import rentImage from '@/assets/images/rent.webp'
+import buyImage from '@/assets/images/buy.webp'
+import coLivingImage from '@/assets/images/co-living.webp'
+import leaseImage from '@/assets/images/lease.webp'
+import nightImage from '@/assets/images/night.webp'
+
+const router = useRouter()
+
+const featuredProperties = [
+  {
+    slug: 'sunset-blvd-home',
+    image: sellImage,
+    price: '₦ 895,000,000',
+    details: '5 beds   4 baths   3,250 sq ft',
+    location: 'Victoria Island, Lagos',
+  },
+  {
+    slug: 'park-avenue-home',
+    image: rentImage,
+    price: '₦ 1,250,000,000',
+    details: '4 beds   3 baths   2,850 sq ft',
+    location: 'Wuse, Abuja',
+  },
+  {
+    slug: 'congress-avenue-home',
+    image: buyImage,
+    price: '₦ 735,000,000',
+    details: '6 beds   5 baths   3,500 sq ft',
+    location: 'Abeokuta, Ogun',
+  },
+  {
+    slug: 'peachtree-street-home',
+    image: coLivingImage,
+    price: '₦ 680,000,000',
+    details: '3 beds   3 baths   1,900 sq ft',
+    location: 'Gwarinpa, Abuja',
+  },
+  {
+    slug: 'lincoln-road-home',
+    image: leaseImage,
+    price: '₦ 925,000,000',
+    details: '4 beds   4 baths   2,400 sq ft',
+    location: 'Ikeja, Lagos',
+  },
+  {
+    slug: 'third-avenue-home',
+    image: nightImage,
+    price: '₦ 820,000,000',
+    details: '5 beds   4 baths   2,900 sq ft',
+    location: 'Festac, Lagos',
+  },
+]
+
+function openProperty(slug) {
+  router.push(`/properties/${slug}`)
+}
 </script>
 
 <template>
@@ -8,117 +66,25 @@
             <p>From a few nights to forever — One place to find it. </p>
         </div>
     </section>
-    <div class="home_cards">
-    <div class="listing_card">
-        <div class="home_image">
-            <img src="@/assets/images/sell.jpg" alt="Home Image" height="456" width="456"  />
-            <div class="image-overlay"></div>
-        </div>
-        <div class="listing">
-            <span>Listed By Clinton Homes</span>
-        </div>
-         <div class="listing-card_info">
-          <p class="listing-card_price">₦ 895,000,000</p>
-          <p class="listing-card_details">5 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 3,250 sq ft</p>
-          <p class="listing-card_address">Ikoyi, Lagos</p>
-        </div>
-        <div class="card-footer">
-          <button class="view-btn">View Property</button>
-        </div>
-    </div>
-    
-    <div class="listing_card">
-        <div class="home_image">
-            <img src="@/assets/images/rent.jpg" alt="Home Image" height="456" width="456"  />
-            <div class="image-overlay"></div>
-        </div>
-        <div class="listing">
-            <span>Listed By Clinton Homes</span>
-        </div>
-         <div class="listing-card_info">
-          <p class="listing-card_price">₦ 1,250,000,000</p>
-          <p class="listing-card_details">4 beds &nbsp;&nbsp; 3 baths &nbsp;&nbsp; 2,850 sq ft</p>
-          <p class="listing-card_address">Wuse, Abuja</p>
-        </div>
-        <div class="card-footer">
-          <button class="view-btn">View Property</button>
-        </div>
-    </div>
-    
-    <div class="listing_card">
-        <div class="home_image">
-            <img src="@/assets/images/buy.jpg" alt="Home Image" height="456" width="456" />
-            <div class="image-overlay"></div>
-        </div>
-        <div class="listing">
-            <span>Listed By Clinton Homes</span>
-        </div>
-         <div class="listing-card_info">
-          <p class="listing-card_price">₦ 735,000,000</p>
-          <p class="listing-card_details">6 beds &nbsp;&nbsp; 5 baths &nbsp;&nbsp; 3,500 sq ft</p>
-          <p class="listing-card_address">Lekki Phase 1, Lagos</p>
-        </div>
-        <div class="card-footer">
-          <button class="view-btn">View Property</button>
-        </div>
-    </div>
 
-    </div>
     <div class="home_cards">
-    <div class="listing_card">
+      <div v-for="property in featuredProperties" :key="property.slug" class="listing_card">
         <div class="home_image">
-            <img src="@/assets/images/co-living.jpg" alt="Home Image" height="456" width="456"  />
-            <div class="image-overlay"></div>
+          <img :src="property.image" :alt="property.location" height="456" width="456" />
+          <div class="image-overlay"></div>
         </div>
         <div class="listing">
-            <span>Listed By Clinton Homes</span>
+          <span>Listed By Clinton Homes</span>
         </div>
-         <div class="listing-card_info">
-          <p class="listing-card_price">₦ 680,000,000</p>
-          <p class="listing-card_details">3 beds &nbsp;&nbsp; 3 baths &nbsp;&nbsp; 1,900 sq ft</p>
-          <p class="listing-card_address">Gwarinpa, Abuja</p>
-        </div>
-        <div class="card-footer">
-          <button class="view-btn">View Property</button>
-        </div>
-    </div>
-    
-    <div class="listing_card">
-        <div class="home_image">
-            <img src="@/assets/images/lease.jpg" alt="Home Image" height="456" width="456"  />
-            <div class="image-overlay"></div>
-        </div>
-        <div class="listing">
-            <span>Listed By Clinton Homes</span>
-        </div>
-         <div class="listing-card_info">
-          <p class="listing-card_price">₦ 925,000,000</p>
-          <p class="listing-card_details">4 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 2,400 sq ft</p>
-          <p class="listing-card_address">Ikeja, Lagos</p>
+        <div class="listing-card_info">
+          <p class="listing-card_price">{{ property.price }}</p>
+          <p class="listing-card_details">{{ property.details }}</p>
+          <p class="listing-card_address">{{ property.location }}</p>
         </div>
         <div class="card-footer">
-          <button class="view-btn">View Property</button>
+          <button class="view-btn" type="button" @click="openProperty(property.slug)">View Property</button>
         </div>
-    </div>
-    
-    <div class="listing_card">
-        <div class="home_image">
-            <img src="@/assets/images/night.jpg" alt="Home Image" height="456" width="456" />
-            <div class="image-overlay"></div>
-        </div>
-        <div class="listing">
-            <span>Listed By Clinton Homes</span>
-        </div>
-         <div class="listing-card_info">
-          <p class="listing-card_price">₦ 820,000,000</p>
-          <p class="listing-card_details">5 beds &nbsp;&nbsp; 4 baths &nbsp;&nbsp; 2,900 sq ft</p>
-          <p class="listing-card_address">Victoria Island, Lagos</p>
-        </div>
-        <div class="card-footer">
-          <button class="view-btn">View Property</button>
-        </div>
-    </div>
-
+      </div>
     </div>
 </template>
 

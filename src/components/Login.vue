@@ -4,6 +4,8 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
+const ADMIN_EMAIL = 'admin@clintonhomes.com'
+const ADMIN_PASSWORD = 'admin123'
 
 const signInForm = ref({
 	email: '',
@@ -18,14 +20,38 @@ const createAccountForm = ref({
 
 const resetEmail = ref('')
 const resetSent = ref(false)
+const showPassword = ref(false)
+const showCreatePassword = ref(false)
+
+function loginAsAdmin() {
+	signInForm.value.email = ADMIN_EMAIL
+	signInForm.value.password = ''
+	showPassword.value = false
+	document.getElementById('mode-signin')?.click()
+}
 
 function handleSignInSubmit() {
 	if (!signInForm.value.email || !signInForm.value.password) return
+
+	const email = signInForm.value.email.trim().toLowerCase()
+	const password = signInForm.value.password
+
+	if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+		localStorage.setItem('ch_admin_authenticated', 'true')
+		localStorage.setItem('ch_user_authenticated', 'false')
+		router.push('/admin/dashboard')
+		return
+	}
+
+	localStorage.setItem('ch_user_authenticated', 'true')
+	localStorage.setItem('ch_admin_authenticated', 'false')
 	router.push('/')
 }
 
 function handleCreateAccountSubmit() {
 	if (!createAccountForm.value.name || !createAccountForm.value.email || !createAccountForm.value.password) return
+	localStorage.setItem('ch_user_authenticated', 'true')
+	localStorage.setItem('ch_admin_authenticated', 'false')
 	router.push('/')
 }
 
@@ -71,10 +97,10 @@ function returnToSignIn() {
 				</div>
 
 				<div id="sign-in" class="auth-view">
-					<div class="heading">
-						<p class="eyebrow">Welcome back</p>
-						<h2>Sign in to Clinton Homes</h2>
-						<p class="subheading">Your next move starts here.</p>
+<div class="heading">
+					<p class="eyebrow">Welcome back</p>
+					<h2>Sign in to Clinton Homes</h2>
+					<p class="subheading">Your next move starts here.</p>
 					</div>
 
 					<form class="auth-form" @submit.prevent="handleSignInSubmit">
@@ -83,12 +109,19 @@ function returnToSignIn() {
 							<input v-model="signInForm.email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
 						</label>
 
-						<label>
-							Password
-							<input v-model="signInForm.password" type="password" name="password" autocomplete="current-password" placeholder="Enter your password" required />
+						<label class="password-label">
+							<span>Password</span>
+							<div class="password-wrap">
+								<input v-model="signInForm.password" :type="showPassword ? 'text' : 'password'" name="password" autocomplete="current-password" placeholder="Enter your password" required />
+								<button class="toggle-password" type="button" @click="showPassword = !showPassword" aria-label="Toggle password visibility">
+									{{ showPassword ? 'Hide' : 'Show' }}
+								</button>
+							</div>
 						</label>
 
 						<button class="submit-button" type="submit">Sign in <span aria-hidden="true">&#8594;</span></button>
+						<button class="admin-button" type="button" @click="loginAsAdmin">Login as admin</button>
+						<p class="admin-note">Admin demo: admin@clintonhomes.com / admin123</p>
 					</form>
 					<label class="text-button" for="mode-reset">Forgot password?</label>
 				</div>
@@ -109,9 +142,14 @@ function returnToSignIn() {
 							Email address
 							<input v-model="createAccountForm.email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
 						</label>
-						<label>
-							Password
-							<input v-model="createAccountForm.password" type="password" name="password" autocomplete="new-password" placeholder="Create a password" required />
+						<label class="password-label">
+							<span>Password</span>
+							<div class="password-wrap">
+								<input v-model="createAccountForm.password" :type="showCreatePassword ? 'text' : 'password'" name="password" autocomplete="new-password" placeholder="Create a password" required />
+								<button class="toggle-password" type="button" @click="showCreatePassword = !showCreatePassword" aria-label="Toggle password visibility">
+									{{ showCreatePassword ? 'Hide' : 'Show' }}
+								</button>
+							</div>
 						</label>
 
 						<div class="role-section">
@@ -404,6 +442,36 @@ h2 {
 	font-weight: 700;
 }
 
+.password-label {
+	display: block;
+}
+
+.password-wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-top: 9px;
+}
+
+.password-wrap input {
+	flex: 1;
+	padding-right: 88px;
+}
+
+.toggle-password {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	border: none;
+	background: transparent;
+	color: #5b6470;
+	padding: 8px 8px;
+	border-radius: 4px;
+	font: 600 0.72rem 'DM Sans', sans-serif;
+	cursor: pointer;
+}
+
 input {
 	width: 100%;
 	margin-top: 9px;
@@ -482,6 +550,25 @@ input:focus {
 .submit-button:hover {
 	background: #a95025;
 	transform: translateY(-1px);
+}
+
+.admin-button {
+	width: 100%;
+	margin-top: 12px;
+	padding: 15px;
+	border: 1px solid #d8b38f;
+	border-radius: 4px;
+	background: #fff5ee;
+	color: #7a3b11;
+	font: 700 0.9rem 'DM Sans', sans-serif;
+	cursor: pointer;
+}
+
+.admin-note {
+	margin: 12px 0 0;
+	color: #69737d;
+	font-size: 0.75rem;
+	text-align: center;
 }
 
 .submit-button span {

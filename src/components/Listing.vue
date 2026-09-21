@@ -85,7 +85,7 @@
         </div>
         <h3>Co-living</h3>
         <p>"Room shares and flatmate matches, where house rules are negotiated collectively by all mates."</p>
-        <router-link class="cta" to="/coliving">Browse co-living homes</router-link>
+        <router-link class="cta" to="/co-living">Browse co-living homes</router-link>
       </article>
     </div>
   </section>
