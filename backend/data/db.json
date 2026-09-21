@@ -1,0 +1,308 @@
+{
+  "propertyListings": [
+    {
+      "id": 1,
+      "title": "Contemporary family duplex",
+      "location": "Lekki Phase 1, Lagos",
+      "price": "₦85,000,000",
+      "status": "Sold",
+      "landlord": "Hammed Yahyah",
+      "bedrooms": 4,
+      "baths": 3,
+      "type": "Duplex"
+    },
+    {
+      "id": 2,
+      "title": "Warm family residence",
+      "location": "Chevron, Lagos",
+      "price": "₦62,500,000",
+      "status": "Pending",
+      "landlord": "Olanrewaju Gideon",
+      "bedrooms": 3,
+      "baths": 3,
+      "type": "Apartment"
+    },
+    {
+      "id": 3,
+      "title": "The nightfall terrace home",
+      "location": "Ikoyi, Lagos",
+      "price": "₦110,000,000",
+      "status": "Active",
+      "landlord": "Gabriel Chris",
+      "bedrooms": 5,
+      "baths": 5,
+      "type": "Penthouse"
+    },
+    {
+      "id": 4,
+      "title": "Quiet modern townhouse",
+      "location": "Yaba, Lagos",
+      "price": "₦48,000,000",
+      "status": "Active",
+      "landlord": "Chukuemeka Promisess",
+      "bedrooms": 3,
+      "baths": 2,
+      "type": "Townhouse"
+    },
+    {
+      "id": 5,
+      "title": "Sunset garden residence",
+      "location": "Victoria Island, Lagos",
+      "price": "₦895,000,000",
+      "status": "Active",
+      "landlord": "Aisha Okafor",
+      "bedrooms": 5,
+      "baths": 4,
+      "type": "House"
+    },
+    {
+      "id": 6,
+      "title": "Park Avenue city apartment",
+      "location": "Wuse, Abuja",
+      "price": "₦1,250,000,000",
+      "status": "Active",
+      "landlord": "Daniel Nwachukwu",
+      "bedrooms": 4,
+      "baths": 3,
+      "type": "Penthouse"
+    },
+    {
+      "id": 7,
+      "title": "Congress Avenue modern home",
+      "location": "Abeokuta, Ogun",
+      "price": "₦735,000,000",
+      "status": "Active",
+      "landlord": "Samuel Adeola",
+      "bedrooms": 6,
+      "baths": 5,
+      "type": "House"
+    },
+    {
+      "id": 8,
+      "title": "Peachtree street townhouse",
+      "location": "Gwarinpa, Abuja",
+      "price": "₦680,000,000",
+      "status": "Active",
+      "landlord": "Tola Adebayo",
+      "bedrooms": 3,
+      "baths": 3,
+      "type": "Villa"
+    },
+    {
+      "id": 9,
+      "title": "Lincoln Road coastal retreat",
+      "location": "Ikeja, Lagos",
+      "price": "₦925,000,000",
+      "status": "Active",
+      "landlord": "Musa Bello",
+      "bedrooms": 4,
+      "baths": 4,
+      "type": "Apartment"
+    },
+    {
+      "id": 10,
+      "title": "Third Avenue light-filled home",
+      "location": "Festac, Lagos",
+      "price": "₦820,000,000",
+      "status": "Pending",
+      "landlord": "Kingsley Okafor",
+      "bedrooms": 5,
+      "baths": 4,
+      "type": "Apartment"
+    }
+  ],
+  "landlordApplications": [
+    {
+      "id": 1,
+      "name": "Aisha Okafor",
+      "property": "Sunset garden residence",
+      "location": "Victoria Island",
+      "submitted": "2 days ago",
+      "status": "Approved"
+    },
+    {
+      "id": 2,
+      "name": "Daniel Nwachukwu",
+      "property": "Lincoln Road coastal retreat",
+      "location": "Ikeja",
+      "submitted": "4 days ago",
+      "status": "Approved"
+    },
+    {
+      "id": 3,
+      "name": "Musa Bello",
+      "property": "Park Avenue city apartment",
+      "location": "Wuse",
+      "submitted": "1 week ago",
+      "status": "Approved"
+    },
+    {
+      "id": 4,
+      "name": "Blessing Eze",
+      "property": "Palm court duplex",
+      "location": "Lekki Phase 2",
+      "submitted": "5 hours ago",
+      "status": "Pending"
+    },
+    {
+      "id": 5,
+      "name": "Peter Ojo",
+      "property": "Emerald villa",
+      "location": "Surulere",
+      "submitted": "1 day ago",
+      "status": "Approved"
+    },
+    {
+      "id": 6,
+      "name": "Ada Mba",
+      "property": "Cedar lane residence",
+      "location": "Gwarinpa",
+      "submitted": "3 days ago",
+      "status": "Pending"
+    },
+    {
+      "id": 7,
+      "name": "Funke Akin",
+      "property": "Azure terrace home",
+      "location": "Ikoyi",
+      "submitted": "6 days ago",
+      "status": "Pending"
+    },
+    {
+      "id": 8,
+      "name": "Chika Umeh",
+      "property": "Harbor view apartments",
+      "location": "Ajah",
+      "submitted": "2 weeks ago",
+      "status": "Pending"
+    }
+  ],
+  "leadRecords": [
+    {
+      "id": 1,
+      "name": "Femi A.",
+      "inquiry": "Interested in Lekki duplex",
+      "source": "Website",
+      "status": "Qualified",
+      "date": "Today"
+    },
+    {
+      "id": 2,
+      "name": "Joy S.",
+      "inquiry": "Requested viewing for Yaba apartment",
+      "source": "Instagram",
+      "status": "Follow up",
+      "date": "Yesterday"
+    },
+    {
+      "id": 3,
+      "name": "Tunde B.",
+      "inquiry": "Looking for 3-bedroom in Ikoyi",
+      "source": "Referral",
+      "status": "Qualified",
+      "date": "2 days ago"
+    },
+    {
+      "id": 4,
+      "name": "Ada O.",
+      "inquiry": "Asked for landlord details",
+      "source": "WhatsApp",
+      "status": "Follow up",
+      "date": "3 days ago"
+    }
+  ],
+  "dashboardStats": [
+    {
+      "label": "Active listings",
+      "value": "128",
+      "change": "+12%"
+    },
+    {
+      "label": "Pending approvals",
+      "value": "18",
+      "change": "+4%"
+    },
+    {
+      "label": "Leads this month",
+      "value": "246",
+      "change": "+18%"
+    },
+    {
+      "label": "Closed deals",
+      "value": "39",
+      "change": "+9%"
+    }
+  ],
+  "recentActivity": [
+    "New landlord application received from Victoria Island",
+    "Buyer request moved to follow-up stage for Yaba apartment",
+    "Property listing updated for Chevron residence",
+    "Monthly report generated for Q3 property pipeline"
+  ],
+  "reports": {
+    "summary": [
+      {
+        "label": "Revenue pipeline",
+        "value": "₦14.8M",
+        "change": "+18% from last month"
+      },
+      {
+        "label": "Buyer conversion",
+        "value": "31%",
+        "change": "Target: 40%"
+      },
+      {
+        "label": "Top location",
+        "value": "Lekki",
+        "change": "24 active leads"
+      }
+    ],
+    "chart": [
+      {
+        "month": "Jan",
+        "value": 38,
+        "detail": "₦2.4M"
+      },
+      {
+        "month": "Feb",
+        "value": 52,
+        "detail": "₦3.1M"
+      },
+      {
+        "month": "Mar",
+        "value": 68,
+        "detail": "₦4.1M"
+      },
+      {
+        "month": "Apr",
+        "value": 75,
+        "detail": "₦4.6M"
+      },
+      {
+        "month": "May",
+        "value": 86,
+        "detail": "₦5.8M"
+      },
+      {
+        "month": "Jun",
+        "value": 96,
+        "detail": "₦6.4M"
+      },
+      {
+        "month": "Jul",
+        "value": 118,
+        "detail": "₦7.1M"
+      },
+      {
+        "month": "Aug",
+        "value": 134,
+        "detail": "₦8.3M"
+      },
+      {
+        "month": "Sep",
+        "value": 156,
+        "detail": "₦9.6M"
+      }
+    ]
+  }
+}

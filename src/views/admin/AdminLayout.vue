@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
+import logo from '@/assets/images/logo6.png'
 
 const route = useRoute()
 const router = useRouter()
@@ -24,14 +25,6 @@ const pageTitle = computed(() => route.meta.title || 'Dashboard')
 <template>
   <div class="admin-shell">
     <aside class="admin-sidebar">
-      <div class="brand-block">
-        <div class="brand-mark">CH</div>
-        <div>
-          <strong>Clinton Homes</strong>
-          <small>Admin</small>
-        </div>
-      </div>
-
       <nav class="sidebar-nav">
         <RouterLink
           v-for="item in navItems"
@@ -43,6 +36,16 @@ const pageTitle = computed(() => route.meta.title || 'Dashboard')
           {{ item.label }}
         </RouterLink>
       </nav>
+
+      <div class="brand-block">
+        <div class="brand-stack">
+          <img :src="logo" alt="Clinton Homes logo" class="brand-logo" />
+          <div class="admin-user-tag">
+            <span class="user-name">Johnson Favour</span>
+            <span class="user-role">Admin</span>
+          </div>
+        </div>
+      </div>
     </aside>
 
     <main class="admin-main">
@@ -86,33 +89,56 @@ const pageTitle = computed(() => route.meta.title || 'Dashboard')
   background: #1b2a41;
   color: #fff;
   padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .brand-block {
   display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-stack {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 36px;
+  gap: 8px;
 }
 
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, #c1652f, #df8c52);
-  color: #fff;
-  font-weight: 700;
-}
-
-.brand-block strong {
+.brand-logo {
+  width: 190px;
+  max-width: 100%;
+  height: auto;
   display: block;
-  font-size: 1rem;
+  filter: drop-shadow(0 12px 22px rgba(193, 101, 47, 0.2));
 }
 
-.brand-block small {
-  color: rgba(255, 255, 255, 0.75);
+.admin-user-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  text-align: center;
+}
+
+.user-name {
+  color: rgba(255, 255, 255, 0.96);
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.user-role {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .sidebar-nav {

@@ -1,6 +1,24 @@
 <script setup>
+import { onMounted, ref } from 'vue'
 import AdminLayout from './AdminLayout.vue'
-import { landlordApplications } from './mockData'
+import { adminApi } from '@/services/adminApi'
+
+const landlordApplications = ref([])
+
+async function loadLandlords() {
+  landlordApplications.value = await adminApi.getLandlords()
+}
+
+async function approveLandlord(id) {
+  const result = await adminApi.updateLandlordStatus(id, 'Approved')
+  landlordApplications.value = landlordApplications.value.map((app) =>
+    app.id === id ? { ...app, status: result.application.status } : app,
+  )
+}
+
+onMounted(() => {
+  loadLandlords()
+})
 </script>
 
 <template>
@@ -28,7 +46,7 @@ import { landlordApplications } from './mockData'
 
           <div class="status-row">
             <span class="status-badge" :class="app.status.toLowerCase()">{{ app.status }}</span>
-            <button type="button" class="mini-button">Approve</button>
+            <button type="button" class="mini-button" @click="approveLandlord(app.id)">Approve</button>
           </div>
         </article>
       </div>

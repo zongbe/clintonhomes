@@ -2,6 +2,7 @@
 import Footer from '@/components/Footer.vue'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { adminApi } from '@/services/adminApi'
 
 const router = useRouter()
 const ADMIN_EMAIL = 'admin@clintonhomes.com'
@@ -30,17 +31,24 @@ function loginAsAdmin() {
 	document.getElementById('mode-signin')?.click()
 }
 
-function handleSignInSubmit() {
+async function handleSignInSubmit() {
 	if (!signInForm.value.email || !signInForm.value.password) return
 
 	const email = signInForm.value.email.trim().toLowerCase()
 	const password = signInForm.value.password
 
 	if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-		localStorage.setItem('ch_admin_authenticated', 'true')
-		localStorage.setItem('ch_user_authenticated', 'false')
-		router.push('/admin/dashboard')
-		return
+		try {
+			const result = await adminApi.login(email, password)
+			if (result.success) {
+				localStorage.setItem('ch_admin_authenticated', 'true')
+				localStorage.setItem('ch_user_authenticated', 'false')
+				router.push('/admin/dashboard')
+				return
+			}
+		} catch (error) {
+			console.error('Admin login failed', error)
+		}
 	}
 
 	localStorage.setItem('ch_user_authenticated', 'true')

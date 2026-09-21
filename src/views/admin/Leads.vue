@@ -1,15 +1,24 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import AdminLayout from './AdminLayout.vue'
-import { leadRecords } from './mockData'
+import { adminApi } from '@/services/adminApi'
 
-const leads = ref([...leadRecords])
+const leads = ref([])
 
-function updateStatus(id, nextStatus) {
+async function loadLeads() {
+  leads.value = await adminApi.getLeads()
+}
+
+async function updateStatus(id, nextStatus) {
+  const result = await adminApi.updateLeadStatus(id, nextStatus)
   leads.value = leads.value.map((lead) =>
-    lead.id === id ? { ...lead, status: nextStatus } : lead,
+    lead.id === id ? { ...lead, status: result.lead.status } : lead,
   )
 }
+
+onMounted(() => {
+  loadLeads()
+})
 </script>
 
 <template>
@@ -20,6 +29,15 @@ function updateStatus(id, nextStatus) {
           <p class="eyebrow">CRM</p>
           <h2>Leads and inquiries</h2>
         </div>
+      </div>
+
+      <div class="qualification-box">
+        <h3>How a lead is qualified</h3>
+        <ul>
+          <li>They confirm a preferred location and property type.</li>
+          <li>They share a realistic budget range or willingness to purchase or rent.</li>
+          <li>They show clear interest by requesting a viewing, enquiry, or follow-up action.</li>
+        </ul>
       </div>
 
       <div class="table-wrap">
@@ -64,6 +82,26 @@ function updateStatus(id, nextStatus) {
   border-radius: 18px;
   padding: 22px;
   box-shadow: 0 8px 24px rgba(27, 42, 65, 0.04);
+}
+
+.qualification-box {
+  margin: 0 0 20px;
+  padding: 18px 20px;
+  background: #faf7f2;
+  border: 1px solid #eee5d9;
+  border-radius: 14px;
+}
+
+.qualification-box h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.qualification-box ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #415266;
+  line-height: 1.7;
 }
 
 .panel-header h2 {

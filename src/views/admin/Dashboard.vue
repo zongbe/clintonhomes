@@ -1,6 +1,26 @@
 <script setup>
+import { onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import AdminLayout from './AdminLayout.vue'
-import { dashboardStats, recentActivity } from './mockData'
+import { adminApi } from '@/services/adminApi'
+
+const router = useRouter()
+const dashboardStats = ref([])
+const recentActivity = ref([])
+
+async function loadDashboard() {
+  const response = await adminApi.getDashboard()
+  dashboardStats.value = response.stats || []
+  recentActivity.value = response.recentActivity || []
+}
+
+function goTo(path) {
+  router.push(path)
+}
+
+onMounted(() => {
+  loadDashboard()
+})
 </script>
 
 <template>
@@ -31,9 +51,9 @@ import { dashboardStats, recentActivity } from './mockData'
         </div>
 
         <div class="action-stack">
-          <button type="button">Add new property</button>
-          <button type="button">Review landlord requests</button>
-          <button type="button">View all leads</button>
+          <button type="button" @click="goTo('/admin/properties')">Add new property</button>
+          <button type="button" @click="goTo('/admin/landlords')">Review landlord requests</button>
+          <button type="button" @click="goTo('/admin/leads')">View all leads</button>
         </div>
       </div>
     </section>
