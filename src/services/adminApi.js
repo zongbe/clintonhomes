@@ -53,6 +53,10 @@ export const adminApi = {
       method: 'PATCH',
       body: JSON.stringify({ status }),
     }),
+  deleteLandlord: (id) =>
+    request(`/landlords/${id}`, {
+      method: 'DELETE',
+    }),
 
   getLeads: () => request('/leads'),
   updateLeadStatus: (id, status) =>

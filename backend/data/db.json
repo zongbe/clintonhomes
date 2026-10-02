@@ -118,7 +118,14 @@
       "property": "Sunset garden residence",
       "location": "Victoria Island",
       "submitted": "2 days ago",
-      "status": "Approved"
+      "status": "Approved",
+      "email": "aisha.okafor@clintonhomes.com",
+      "phone": "+234 802 345 6789",
+      "about": "A seasoned property investor with a strong portfolio in luxury residential investments and long-term leasing management.",
+      "propertyType": "Luxury residential",
+      "portfolio": "4 active residential investments",
+      "experience": "7 years in property management",
+      "verification": "KYC verified"
     },
     {
       "id": 2,
@@ -126,7 +133,14 @@
       "property": "Lincoln Road coastal retreat",
       "location": "Ikeja",
       "submitted": "4 days ago",
-      "status": "Approved"
+      "status": "Approved",
+      "email": "daniel.nwachukwu@landlordmail.com",
+      "phone": "+234 806 771 8890",
+      "about": "Owns multi-unit rental homes and manages tenant screening and maintenance internally.",
+      "propertyType": "Multi-unit apartments",
+      "portfolio": "3 rental blocks and 2 townhouses",
+      "experience": "5 years in residential letting",
+      "verification": "KYC verified"
     },
     {
       "id": 3,
@@ -134,7 +148,14 @@
       "property": "Park Avenue city apartment",
       "location": "Wuse",
       "submitted": "1 week ago",
-      "status": "Approved"
+      "status": "Rejected",
+      "email": "musa.bello@urbanlease.ng",
+      "phone": "+234 815 223 3041",
+      "about": "Focused on urban rental homes and value-driven property upgrades for young professionals.",
+      "propertyType": "City apartment",
+      "portfolio": "2 mixed-use apartments",
+      "experience": "4 years in city rentals",
+      "verification": "KYC verified"
     },
     {
       "id": 4,
@@ -142,7 +163,14 @@
       "property": "Palm court duplex",
       "location": "Lekki Phase 2",
       "submitted": "5 hours ago",
-      "status": "Pending"
+      "status": "Pending",
+      "email": "blessing.eze@gmail.com",
+      "phone": "+234 814 666 9981",
+      "about": "New landlord joining the platform with a duplex seeking professional tenant acquisition support.",
+      "propertyType": "Duplex",
+      "portfolio": "1 current property",
+      "experience": "1 year in short-let management",
+      "verification": "Awaiting verification"
     },
     {
       "id": 5,
@@ -150,7 +178,14 @@
       "property": "Emerald villa",
       "location": "Surulere",
       "submitted": "1 day ago",
-      "status": "Approved"
+      "status": "Approved",
+      "email": "peter.ojo@propertyhub.ng",
+      "phone": "+234 807 442 1245",
+      "about": "High-end villa owner focused on premium long-term tenancy and building retention value.",
+      "propertyType": "Villa",
+      "portfolio": "2 premium villas and 1 serviced apartment",
+      "experience": "8 years in premium rentals",
+      "verification": "KYC verified"
     },
     {
       "id": 6,
@@ -158,7 +193,14 @@
       "property": "Cedar lane residence",
       "location": "Gwarinpa",
       "submitted": "3 days ago",
-      "status": "Pending"
+      "status": "Pending",
+      "email": "ada.mba@outlook.com",
+      "phone": "+234 903 778 4451",
+      "about": "Investor interested in family homes with good tenant demand and reliable occupancy.",
+      "propertyType": "Family residence",
+      "portfolio": "1 family home",
+      "experience": "2 years in residential leasing",
+      "verification": "Awaiting verification"
     },
     {
       "id": 7,
@@ -166,7 +208,14 @@
       "property": "Azure terrace home",
       "location": "Ikoyi",
       "submitted": "6 days ago",
-      "status": "Pending"
+      "status": "Pending",
+      "email": "funke.akin@homesynergy.ng",
+      "phone": "+234 812 330 9002",
+      "about": "Interested in premium listings with strong marketing and direct buyer inquiry handling.",
+      "propertyType": "Terrace home",
+      "portfolio": "2 terrace homes under management",
+      "experience": "6 years in property investments",
+      "verification": "Awaiting verification"
     },
     {
       "id": 8,
@@ -174,7 +223,14 @@
       "property": "Harbor view apartments",
       "location": "Ajah",
       "submitted": "2 weeks ago",
-      "status": "Pending"
+      "status": "Pending",
+      "email": "chika.umeh@plusmail.com",
+      "phone": "+234 816 221 7030",
+      "about": "Owns coastal residential units and is seeking stronger digital brand visibility for occupancy growth.",
+      "propertyType": "Apartment block",
+      "portfolio": "3 apartment buildings",
+      "experience": "5 years in property marketing",
+      "verification": "Awaiting verification"
     }
   ],
   "leadRecords": [

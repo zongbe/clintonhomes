@@ -444,6 +444,22 @@ app.patch('/api/landlords/:id/status', async (req, res) => {
   res.json({ success: true, application: db.landlordApplications.find((item) => item.id === id) })
 })
 
+app.delete('/api/landlords/:id', async (req, res) => {
+  const db = await readDatabase()
+  const id = Number(req.params.id)
+
+  const exists = db.landlordApplications.some((application) => application.id === id)
+
+  if (!exists) {
+    return res.status(404).json({ message: 'Landlord application not found' })
+  }
+
+  db.landlordApplications = db.landlordApplications.filter((application) => application.id !== id)
+  await writeDatabase(db)
+
+  return res.json({ success: true })
+})
+
 app.get('/api/leads', async (req, res) => {
   const db = await readDatabase()
   res.json(db.leadRecords)

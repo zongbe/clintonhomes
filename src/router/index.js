@@ -49,17 +49,11 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
     const isAdminRoute = to.path.startsWith('/admin')
-    const isLandlordRoute = to.path.startsWith('/landlord')
     const isAdminAuthenticated = localStorage.getItem('ch_admin_authenticated') === 'true'
     const isUserAuthenticated = localStorage.getItem('ch_user_authenticated') === 'true'
     const isAuthenticated = isAdminAuthenticated || isUserAuthenticated
 
     if (isAdminRoute && !isAdminAuthenticated) {
-        next('/login')
-        return
-    }
-
-    if (isLandlordRoute && !isAuthenticated) {
         next('/login')
         return
     }
@@ -70,8 +64,10 @@ router.beforeEach((to, from, next) => {
             return
         }
 
-        next('/buy')
-        return
+        if (isUserAuthenticated) {
+            next('/buy')
+            return
+        }
     }
 
     next()
