@@ -17,7 +17,8 @@ import AdminLeads from "@/views/admin/Leads.vue";
 import AdminReports from "@/views/admin/Reports.vue";
 
 const routes = [
-    {path: '/', name:'Home', component: Home},
+    {path: '/', redirect: '/login'},
+    {path: '/home', name:'Home', component: Home},
     {path: '/login', name:'Login', component: Login},
     {path: '/buy', name:'Buy', component: Buy},
     {path: '/help', name:'Help', component: Help},
@@ -50,24 +51,10 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
     const isAdminRoute = to.path.startsWith('/admin')
     const isAdminAuthenticated = localStorage.getItem('ch_admin_authenticated') === 'true'
-    const isUserAuthenticated = localStorage.getItem('ch_user_authenticated') === 'true'
-    const isAuthenticated = isAdminAuthenticated || isUserAuthenticated
 
     if (isAdminRoute && !isAdminAuthenticated) {
         next('/login')
         return
-    }
-
-    if (to.path === '/login' && isAuthenticated) {
-        if (isAdminAuthenticated) {
-            next('/admin/dashboard')
-            return
-        }
-
-        if (isUserAuthenticated) {
-            next('/buy')
-            return
-        }
     }
 
     next()

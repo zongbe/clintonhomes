@@ -53,14 +53,14 @@ async function handleSignInSubmit() {
 
 	localStorage.setItem('ch_user_authenticated', 'true')
 	localStorage.setItem('ch_admin_authenticated', 'false')
-	router.push('/')
+	router.push('/home')
 }
 
 function handleCreateAccountSubmit() {
 	if (!createAccountForm.value.name || !createAccountForm.value.email || !createAccountForm.value.password) return
 	localStorage.setItem('ch_user_authenticated', 'true')
 	localStorage.setItem('ch_admin_authenticated', 'false')
-	router.push('/')
+	router.push('/home')
 }
 
 function handleResetSubmit() {
@@ -79,7 +79,7 @@ function returnToSignIn() {
 	<div class="login-page">
 	<main class="auth-page">
 		<section class="auth-showcase" aria-label="Clinton Homes welcome">
-			<router-link to="/" class="brand">
+			<router-link to="/home" class="brand">
 				<img src="@/assets/images/logo6.png" alt="Clinton Homes" />
 			</router-link>
 			<div class="showcase-copy">
@@ -95,7 +95,7 @@ function returnToSignIn() {
 
 		<section class="auth-panel">
 			<div class="auth-content">
-				<router-link to="/" class="mobile-brand">Clinton Homes</router-link>
+				<router-link to="/home" class="mobile-brand">Clinton Homes</router-link>
 				<input class="mode-control" id="mode-signin" type="radio" name="auth-mode" checked />
 				<input class="mode-control" id="mode-create" type="radio" name="auth-mode" />
 				<input class="mode-control" id="mode-reset" type="radio" name="auth-mode" />

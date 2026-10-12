@@ -11,7 +11,7 @@
       <li><router-link to="/co-living">Co-Living</router-link></li>
     </ul>
 
-    <router-link to="/" class="navbar_brand" aria-label="Clinton Homes home">
+    <router-link to="/home" class="navbar_brand" aria-label="Clinton Homes home">
       <img src="@/assets/images/logo6.png" alt="Clinton Homes" class="logo" />
     </router-link>
 
