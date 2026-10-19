@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
+import About from "@/views/About.vue";
 import Login from "@/components/Login.vue";
 import Buy from "@/components/Buy.vue";
 import PropertyDetails from "@/views/PropertyDetails.vue";
@@ -19,6 +20,7 @@ import AdminReports from "@/views/admin/Reports.vue";
 const routes = [
     {path: '/', redirect: '/login'},
     {path: '/home', name:'Home', component: Home},
+    {path: '/about', name:'About', component: About},
     {path: '/login', name:'Login', component: Login},
     {path: '/buy', name:'Buy', component: Buy},
     {path: '/help', name:'Help', component: Help},
@@ -42,6 +44,10 @@ const router = createRouter({
     scrollBehavior(to, from, savedPosition) {
         if (savedPosition) {
             return savedPosition;
+        }
+
+        if (to.hash) {
+            return { el: to.hash };
         }
 
         return { top: 0 };

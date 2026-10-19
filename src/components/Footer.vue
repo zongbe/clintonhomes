@@ -1,5 +1,5 @@
 <script setup>
-
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -13,10 +13,10 @@
       <div class="footer-section">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="#properties">Properties</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><RouterLink to="/home">Home</RouterLink></li>
+          <li><RouterLink to="/buy">Properties</RouterLink></li>
+          <li><RouterLink to="/about">About Us</RouterLink></li>
+          <li><RouterLink to="/help#contact">Contact Us</RouterLink></li>
         </ul>
       </div>
       

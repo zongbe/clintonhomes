@@ -93,7 +93,7 @@ const faqs = [
           </div>
         </div>
 
-        <div class="panel contact-panel">
+        <div id="contact" class="panel contact-panel">
           <p class="eyebrow">Need direct help?</p>
           <h2>Talk to our team</h2>
 

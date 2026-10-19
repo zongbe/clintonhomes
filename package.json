@@ -19,10 +19,24 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.8",
     "concurrently": "^9.1.2",
+    "nodemon": "^3.1.14",
     "vite": "^8.1.5",
     "vite-plugin-vue-devtools": "^8.1.5"
   },
   "engines": {
     "node": "^22.18.0 || >=24.12.0"
-  }
+  },
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zongbe/clintonhomes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zongbe/clintonhomes/issues"
+  },
+  "homepage": "https://github.com/zongbe/clintonhomes#readme"
 }

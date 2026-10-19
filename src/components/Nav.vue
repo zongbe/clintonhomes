@@ -3,6 +3,10 @@
 
 <template>
   <nav class="navbar">
+    <router-link to="/home" class="navbar_brand" aria-label="Clinton Homes home">
+      <img src="@/assets/images/logo6.png" alt="Clinton Homes" class="logo" />
+    </router-link>
+
     <ul class="nav_links">
       <li><router-link to="/buy">Buy</router-link></li>
       <li><router-link to="/sell">Sell</router-link></li>
@@ -10,10 +14,6 @@
       <li><router-link to="/lease">Lease</router-link></li>
       <li><router-link to="/co-living">Co-Living</router-link></li>
     </ul>
-
-    <router-link to="/home" class="navbar_brand" aria-label="Clinton Homes home">
-      <img src="@/assets/images/logo6.png" alt="Clinton Homes" class="logo" />
-    </router-link>
 
     <div class="nav_actions">
       <router-link to="/advertise" class="advertise">Advertise</router-link>
@@ -27,7 +27,7 @@
 
 .navbar {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 1rem;
   padding: 0.8rem 1.5rem;
@@ -41,7 +41,7 @@
 .nav_links {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: clamp(0.35rem, 1.3vw, 1.25rem);
   list-style: none;
   margin: 0;
@@ -70,10 +70,10 @@
 }
 
 .navbar_brand {
-  justify-self: center;
+  justify-self: start;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .logo {
@@ -143,7 +143,17 @@
 @media (max-width: 980px) {
   .navbar {
     grid-template-columns: 1fr;
-    justify-items: center;
+    justify-items: stretch;
+  }
+
+  .navbar_brand {
+    justify-self: start;
+  }
+
+  .nav_links {
+    flex-wrap: wrap;
+    justify-content: center;
+    white-space: normal;
   }
 
   .nav_actions {
